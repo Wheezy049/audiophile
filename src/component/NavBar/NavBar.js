@@ -7,19 +7,24 @@ import Cart from '../../pages/cart';
 const NavBar = () => {
 
    const [isCartOpen, setIsCartOpen] = useState(false);
+   const [isBarOpen, setIsBarOpen] = useState(false)
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+  };
+
+  const toggleBar = () => {
+    setIsBarOpen(!isBarOpen)
   };
 
 
   return (
     <div className='navbar'>
      <div className='logo'>
-      <div><FaBars /></div>
+      <div><FaBars onClick={toggleBar} /></div>
       <Link style={{textDecoration: 'none', color: '#fff'}} to='/'><p>audiophile</p></Link>
      </div>
-     <ul className='nav-menu'>
+     <ul className={`nav-menu ${isBarOpen ? 'show-menu' : ''}`}>
       <li><NavLink style={{textDecoration: 'none'}} to='/'>Home</NavLink></li>
       <li><NavLink style={{textDecoration: 'none'}} to='/headphone'>Headphones</NavLink></li>
       <li><NavLink style={{textDecoration: 'none'}} to='/speaker'>Speakers</NavLink></li>
@@ -29,6 +34,7 @@ const NavBar = () => {
       <FaShoppingCart onClick={toggleCart}/>
      </div>
      {isCartOpen && <Cart />}
+     {}
      {/* <hr/> */}
     </div>
   )

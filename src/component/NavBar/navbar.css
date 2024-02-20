@@ -56,6 +56,20 @@
   .nav-menu{
    display: none;
   }
+  .nav-menu.show-menu {
+    display: flex; /* Show the navigation menu when isBarOpen is true */
+    flex-direction: column;
+    position: absolute;
+    top: 100px; /* Position the menu below the logo */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    z-index: 999;
+  }
+  .nav-menu li a{
+    color: #000;
+  }
 }
 
 /* mobile */
@@ -68,5 +82,21 @@
   }
   .nav-menu{
    display: none;
+  }
+  .nav-menu.show-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    z-index: 999;
+    justify-content: center;
+    text-align: center;
+  }
+  .nav-menu li a{
+    color: #000;
   }
 }
