@@ -51,8 +51,8 @@ text-align: center;
  align-items: center;
  margin: 70px;
  text-align: center;
+ justify-content: center;
  border-radius: 10px;
- padding-left: 70px;
 }
 .speaker-2-text h2 {
 font-size: 28px;
@@ -162,22 +162,35 @@ padding: 5px;
 /* mobile */
 @media screen and (max-width: 480px) {
   .speaker{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 50px;
+    gap: 0;
+  }
+  .speaker-text h1{
+    font-size: 24px;
+  }
+  .speaker-2{
+    height: 200px;
   }
   .earphone{
-    display: block;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .earphone-text{
     width: 337px;
     height: 200px;
   }
   .earphone-text h2{
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .earphone-img img{
     width: 337px;
     height: 200px;
-    margin-bottom: 20px;
   }
 }

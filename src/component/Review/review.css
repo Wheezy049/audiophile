@@ -1,5 +1,5 @@
 .review{
- background-color: #fff;
+ /* background-color: #fff; */
  display: flex;
  margin: 70px;
  height: 588px;
@@ -82,10 +82,14 @@ color: #000000;
   }
   .review-text h1{
    text-align: center;
-   font-size: 28px;
+   font-size: 24px;
+  }
+  .review-text p{
+   text-align: center;
+   font-size: 13px;
   }
   .review-image img{
    width: 337px;
-   height: 300px;
+   height: 200px;
   }
 }

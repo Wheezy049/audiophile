@@ -64,9 +64,12 @@
    height: 175px;
   }
   .item{
-   display: inline-block;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    margin-top: 150px;
-   margin-left: 70px;
+   margin-left: 0;
    height: auto;
   }
 }
