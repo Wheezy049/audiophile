@@ -47,3 +47,36 @@ width: 160px;
 .interest-product button:hover{
  background-color: #FBAF85;
 }
+
+/* tablet */
+@media screen and (max-width: 768px) {
+   .interest-product .img-box{
+    width: 223px;
+    height: 318px;
+   }
+   .interest-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+   }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+   .interest-product .img-box{
+    width: 327px;
+    height: 120px;
+   }
+   .interest-product img{
+    width: 60px;
+    height: 87px;
+   }
+   .interest-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+   }
+}

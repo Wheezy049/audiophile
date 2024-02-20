@@ -8,9 +8,9 @@ function ProductDisplay(props) {
   const {product} = props
   const {addToCart} = useContext(ShopContext)
   return (
-    <div className='product-display'>
-      <div className='category-text'>
-                <img src={product.image.image1} alt='' />
+    <div>
+      <div className='product-display'>
+                <div className='product-img'><img src={product.image.image1} alt='' /></div>
                 <div>
                 <h3>{product.new || ''}</h3>
                 <h1> {product.name} <br /> {product.type}</h1>

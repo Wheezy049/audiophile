@@ -10,12 +10,14 @@ function Description(props) {
        <p>{product.desc}</p>
       </div>
       <div className='box'>
-       <h2>in the box</h2>
+        <div><h2>in the box</h2></div>
+        <div>
        <p><span>{product.count1}</span> {product.text1}</p>
        <p><span>{product.count2}</span> {product.text2}</p>
        <p><span>{product.count3}</span> {product.text3}</p>
        <p><span>{product.count4}</span> {product.text4}</p>
        <p><span>{product.count5 || ''}</span> {product.text5 || ''}</p>
+       </div>
       </div>
     </div>
   )

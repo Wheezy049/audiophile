@@ -34,3 +34,60 @@
  height: 610px;
  border-radius: 5px;
 }
+
+
+/* tablet */
+@media screen and (max-width: 768px) {
+ .related-product{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+  }
+  .related-product .first img{
+    width: 277px;
+   height: 174px;
+  }
+  .related-product .first div{
+    width: 277px;
+   height:  174px;
+  }
+  .related-product .second img{
+    width: 395px;
+   height: 368px;
+  }
+  .related-product .second div{
+    width: 395px;
+   height: 368px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .related-product{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+  }
+  .first{
+   display: block;
+  }
+  .related-product .first img{
+    width: 337px;
+   height: 200px;
+  }
+  .related-product .first div{
+    width: 337px;
+   height: 200px;
+  }
+  .related-product .second img{
+    width: 337px;
+   height: 200px;
+  }
+  .related-product .second div{
+    width: 337px;
+   height: 200px;
+  }
+}
