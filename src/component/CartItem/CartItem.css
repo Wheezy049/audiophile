@@ -1,0 +1,123 @@
+.cart-item{
+ background-color: #fff;
+ width: 377px;
+ height: 488px;
+ border-radius: 3px;
+ padding: 20px 30px;
+ border: 1px solid #000;
+ margin: 10px;
+ position: absolute;
+ top: 150px;
+ right: 20px;
+ z-index: 999;
+}
+.cart-number{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
+}
+.cart-number h3{
+font-size: 18px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 1px;
+text-align: left;
+color: #000;
+text-transform: uppercase;
+}
+.cart-number p{
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+color: #000;
+}
+.cart-product{
+ display: flex;
+ justify-content: space-between;
+}
+.cart-img{
+ display: flex;
+ gap: 10px;
+ align-items: center;
+}
+.cart-img-text p{
+font-size: 14px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+opacity: 0.5;
+color: #000;
+}
+.cart-img-text span{
+font-size: 15px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+color: #000;
+opacity: 1;
+margin-bottom: 2px;
+text-transform: uppercase;
+}
+.img-bg{
+ height: 64px;
+ width: 64px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #f1f1f1;
+ border-radius: 3px;
+}
+.cart-img img{
+ width: 36px;
+ height: 40px;
+}
+.cart-btn{
+ display: flex;
+ gap: 10px;
+ width: 75px;
+height: 25px;
+background-color: #f1f1f1;
+align-items: center;
+justify-content: center;
+margin-top: 30px;
+padding: 5px 8px;
+color: #000;
+}
+.cart-btn button{
+ border: none;
+ outline: none;
+ background: none;
+}
+.cart-total{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ text-align: left;
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+color: #000;
+}
+.cart-item-btn{
+ width: 370px;
+ height: 48px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ border: none;
+ outline: none;
+ background-color: #d87d4a;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 1px;
+color: #fff;
+margin: 10px 0;
+}

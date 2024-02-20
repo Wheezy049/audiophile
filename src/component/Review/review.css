@@ -1,0 +1,91 @@
+.review{
+ background-color: #fff;
+ display: flex;
+ margin: 70px;
+ height: 588px;
+ gap: 80px;
+ overflow: hidden;
+}
+.review-text{
+ margin-top: 170px;
+}
+.review-text h1{
+font-size: 40px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 1.4px;
+text-align: left;
+color: #000;
+}
+.review-text h1 span{
+ color: #D87D4A;
+}
+.review-text p{
+font-size: 15px;
+font-weight: 500;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+opacity: 0.5;
+color: #000000;
+}
+.review-image img{
+ width: 800px;
+ height: 588px;
+ margin-right: -280px;
+ border-radius: 3px;
+ object-fit: contain;
+}
+/* .review-image{
+ background-color: #fff;
+ height: 400px;
+ width: 600px;
+} */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  .review{
+   display: flex;
+   height: auto;
+   flex-direction: column-reverse;
+   gap: 20px;
+  }
+  .review-text{
+   margin-top: 10px;
+   text-align: center;
+  }
+  .review-text h1{
+   text-align: center;
+  }
+  .review-text p{
+   text-align: center;
+  }
+  .review-image img{
+   width: 800px;
+   height: 500px;
+   margin-right: 0;
+   margin-left: 0;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .review{
+   display: flex;
+   height: auto;
+   flex-direction: column-reverse;
+   gap: 20px;
+  }
+  .review-text{
+   margin-top: 0;
+   text-align: center;
+  }
+  .review-text h1{
+   text-align: center;
+   font-size: 28px;
+  }
+  .review-image img{
+   width: 337px;
+   height: 300px;
+  }
+}

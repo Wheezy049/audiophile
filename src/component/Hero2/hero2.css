@@ -1,0 +1,183 @@
+.speaker{
+ display: flex;
+ gap: 150px;
+ justify-content: space-around;
+ align-items: center;
+ background: #D87D4A;
+ padding: 50px 70px 0 120px;
+ overflow: hidden;
+ margin: 70px;
+ border-radius: 10px;
+}
+.speaker-img img{
+  width: 410px;
+  height: 490px;
+  margin-bottom: -34px;
+}
+.speaker-text h1{
+font-size: 56px;
+font-weight: 700;
+line-height: 58px;
+letter-spacing: 2px;
+text-align: left;
+color: #fff;
+}
+.speaker-text p{
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0px;
+text-align: left;
+color: #fff;
+opacity: 0.75;
+}
+.speaker-text button{
+ width: 160px;
+ height: 48px;
+ background-color: #000000;
+ border: none;
+ outline: none;
+ color: #fff;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 1px;
+text-align: center;
+}
+
+.speaker-2{
+ display: flex;
+ height: 320px;
+ align-items: center;
+ margin: 70px;
+ text-align: center;
+ border-radius: 10px;
+ padding-left: 70px;
+}
+.speaker-2-text h2 {
+font-size: 28px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 2px;
+text-align: center;
+color: #000;
+}
+.speaker-2-text button{
+ height: 48px;
+ width: 160px;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 1px;
+text-align: center;
+color: #000;
+border: 1px solid #000000;
+background: none;
+outline: none;
+padding: 5px;
+}
+
+.earphone{
+ margin: 70px;
+ display: flex;
+ gap: 50px;
+ height: 320px;
+}
+.earphone-text{
+ height: 320px;
+ width: 540px;
+ background-color: #f1f1f1;
+ border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.earphone-text h2{
+font-size: 28px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 2px;
+text-align: center;
+color: #000;
+margin-top: 90px;
+}
+.earphone-text button {
+height: 48px;
+width: 160px;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 1px;
+text-align: center;
+color: #000;
+border: 1px solid #000000;
+background: none;
+outline: none;
+padding: 5px;
+}
+.earphone-img img{
+ height: 320px;
+ width: 540px;
+ border-radius: 10px;
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  .speaker{
+    display: block;
+    padding: 50px 170px;
+    margin: 70px;
+    align-items: center;
+  }
+  .speaker-img img{
+  width: 237px;
+  height: 197px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  }
+  .speaker-text{
+    text-align: center;
+  }
+  .speaker-text h1{
+    text-align: center;
+  }
+  .speaker-text p{
+    text-align: center;
+  }
+  .earphone{
+    gap: 10px;
+  }
+  .earphone-text{
+    width: 339px;
+    height: 320px;
+  }
+  .earphone-img img{
+    width: 339px;
+    height: 320px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .speaker{
+    display: block;
+    padding: 50px;
+  }
+  .earphone{
+    display: block;
+  }
+  .earphone-text{
+    width: 337px;
+    height: 200px;
+  }
+  .earphone-text h2{
+    margin-top: 30px;
+  }
+  .earphone-img img{
+    width: 337px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}

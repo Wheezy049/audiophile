@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './component/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Shop from './pages/shop';
+import ShopCategory from './pages/shopCategory';
+import Product from './pages/product';
+import Cart from './pages/cart';
+import Footer from './component/Footer/Footer'
+import Headphone from './pages/Headphone';
+import Speaker from './pages/Speaker';
+import Earphone from './pages/Earphone';
+import CheckOut from './component/CheckOut/CheckOut.';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div>
+      <BrowserRouter>
+       <NavBar />
+       <Routes>
+        <Route path='/' element={<Shop />}/>
+        <Route path='/headphone' element={<Headphone  category='headphones'/>}/>
+        <Route path='/speaker' element={<Speaker category='speakers'/>}/>
+        <Route path='/earphone' element={<Earphone category='earphones'/>}/>
+        <Route path='/product' element={<Product />}>
+            <Route path=':productId' element={<Product />} />
+        </Route>
+        <Route path='/checkout' element={<CheckOut />} />
+       </Routes>
+       <Footer />
+       </BrowserRouter>
+     </div>
   );
 }
 

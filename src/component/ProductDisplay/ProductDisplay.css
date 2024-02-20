@@ -1,0 +1,19 @@
+.btn{
+ display: flex;
+ gap: 10px;
+ margin-top: 30px;
+}
+.increment-btn{
+ display: flex;
+ gap: 20px;
+ justify-content: center;
+ align-items: center;
+ height: 48px;
+ width: 120px;
+ background-color: #f1f1f1;
+ color: #000000;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+text-align: center;
+}

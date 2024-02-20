@@ -1,0 +1,49 @@
+.interest-product{
+ display: flex;
+ margin: 30px 70px;
+ gap: 20px;
+}
+.interest-product .img-box{
+ background-color: #f1f1f1;
+ width: 350px;
+ height: 318px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.interest-product img{
+ height: 194px;
+ width: 175px;
+}
+.interest-product p{
+ display: flex;
+ justify-content: center;
+ text-align: center;
+font-size: 24px;
+font-weight: 700;
+line-height: 33px;
+letter-spacing: 1.7px;
+text-align: center;
+color: #000;
+}
+.interest-product button{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin: auto;
+ background-color: #d87d4a;
+ border: none;
+ outline: none;
+font-size: 13px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 1px;
+text-align: left;
+color: #fff;
+height: 48px;
+width: 160px;
+}
+.interest-product button:hover{
+ background-color: #FBAF85;
+}

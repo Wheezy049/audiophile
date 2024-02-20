@@ -1,0 +1,36 @@
+.related-product{
+ display: flex;
+ gap: 10px;
+ /* justify-content: center; */
+ align-items: center;
+ margin: 30px 0 30px 70px;
+}
+.related-product .first{
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+.related-product .first div{
+ background-color: #fff;
+ height: 300px;
+ width: 450px;
+ object-fit: contain;
+ border-radius: 5px;
+}
+.related-product .second div{
+ background-color: #fff;
+ height: 610px;
+ width: 670px;
+ object-fit: contain;
+ border-radius: 5px;
+}
+.related-product .first img{
+ width: 450px;
+ height: 300px;
+ border-radius: 5px;
+}
+.related-product .second img{
+ width: 670px;
+ height: 610px;
+ border-radius: 5px;
+}
