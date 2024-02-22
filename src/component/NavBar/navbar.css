@@ -63,7 +63,7 @@
     top: 100px; /* Position the menu below the logo */
     left: 0;
     background-color: #fff;
-    /* width: 100%; */
+    width: 100%;
     padding: 20px;
     z-index: 999;
   }
@@ -90,7 +90,7 @@
     top: 100px;
     left: 15px;
     background-color: #fff;
-    /* width: 80%; */
+    width: 100%;
     padding: 20px;
     z-index: 999;
     justify-content: center;
