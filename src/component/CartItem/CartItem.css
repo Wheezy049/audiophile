@@ -121,3 +121,45 @@ letter-spacing: 1px;
 color: #fff;
 margin: 10px 0;
 }
+
+/* tablet */
+@media screen and (max-width:768px) {
+  .cart-item{
+   width: 327px;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0;
+  }
+  .cart-item-btn{
+   width: 327px;
+  }
+  .cart-number{
+   display: flex;
+   gap: 140px;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+  }
+  .cart-total{
+   display: flex;
+   justify-content: space-between;
+   gap: 200px;
+  }.cart-product{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 100px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width:768px) {
+  .cart-item{
+   width: 300px;
+  }
+}

@@ -147,7 +147,7 @@ function CheckOut() {
         <p>${grandTotal}</p>
       </div>
       </div>
-      <button className='cart-item-btn' style={{width: '340px'}}>CONTINUE & PAY</button>
+      <button className='cart-item-btn btn-two'>CONTINUE & PAY</button>
        </div>
       </div>
     </div>

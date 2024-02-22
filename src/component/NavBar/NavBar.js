@@ -11,10 +11,12 @@ const NavBar = () => {
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+    setIsBarOpen(false)
   };
 
   const toggleBar = () => {
     setIsBarOpen(!isBarOpen)
+    setIsCartOpen(false)
   };
 
 
@@ -25,15 +27,15 @@ const NavBar = () => {
       <Link style={{textDecoration: 'none', color: '#fff'}} to='/'><p>audiophile</p></Link>
      </div>
      <ul className={`nav-menu ${isBarOpen ? 'show-menu' : ''}`}>
-      <li><NavLink style={{textDecoration: 'none'}} to='/'>Home</NavLink></li>
-      <li><NavLink style={{textDecoration: 'none'}} to='/headphone'>Headphones</NavLink></li>
-      <li><NavLink style={{textDecoration: 'none'}} to='/speaker'>Speakers</NavLink></li>
-      <li><NavLink style={{textDecoration: 'none'}} to='/earphone'>Earphones</NavLink></li>
+      <li><NavLink style={{textDecoration: 'none'}} to='/' onClick={toggleBar}>Home</NavLink></li>
+      <li><NavLink style={{textDecoration: 'none'}} to='/headphone' onClick={toggleBar}>Headphones</NavLink></li>
+      <li><NavLink style={{textDecoration: 'none'}} to='/speaker' onClick={toggleBar}>Speakers</NavLink></li>
+      <li><NavLink style={{textDecoration: 'none'}} to='/earphone' onClick={toggleBar}>Earphones</NavLink></li>
      </ul>
      <div className='cart-logo'>
-      <FaShoppingCart onClick={toggleCart}/>
+      <FaShoppingCart onClick={toggleCart} />
      </div>
-     {isCartOpen && <Cart />}
+     {isCartOpen && <Cart toggle={toggleCart} />}
      {}
      {/* <hr/> */}
     </div>

@@ -44,7 +44,6 @@ opacity: 0.4;
 color: #000;
 }
 .payment h3{
- font-family: Manrope;
 font-size: 13px;
 font-weight: 700;
 line-height: 25px;
@@ -83,8 +82,6 @@ padding-bottom: 5px;
  width: 20px;
  height: 20px;
  border: 1px solid #CFCFCF;
- /* margin-top: 16px; */
- /* margin-right: 10px; */
 }
 .flex-4 h1{
 font-size: 12px;
@@ -161,4 +158,62 @@ text-transform: capitalize;
 }
 .total div{
   margin-bottom: -5px;
+}
+.btn-two{
+      width: 340px;
+    }
+
+/* tablet */
+@media screen and (max-width: 768px) {
+   .flex{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     gap: 20px;
+     margin-bottom: 40px;
+    }
+    .payment{
+      width: 680px;
+    }
+    .summary{
+      width: 680px;
+      height: auto;
+    }
+    .btn-two{
+      width: 680px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .payment{
+      width: 337px;
+    }
+    .summary{
+      width: 337px;
+      height: auto;
+    }
+    .btn-two{
+      width: 337px;
+    }
+    .flex-2{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+    }
+    .flex-4{
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 20px;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+    }
+    .flex-3 input{
+      width: 309px;
+    }
 }
