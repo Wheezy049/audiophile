@@ -2,41 +2,40 @@ import React, { useContext, useState, useEffect } from 'react';
 import './CartItem.css';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { ShopContext } from '../../context/shopContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CartItem(props) {
-  const navigate = useNavigate()
-  const { all_product, cartItem, removeFromCart, removeAllItems, addToCart } = useContext(ShopContext);
+  const { all_product, cartItem, removeFromCart, removeAllItems, increment } = useContext(ShopContext);
   const [total, setTotal] = useState(0);
-  // const [isCartOpen, setIsCartOpen] = useState(true);
-
-  // const toggleCart = () => {
-  //   setIsCartOpen(!isCartOpen);
-  // };
 
   const calculateTotal = () => {
-    let newTotal = 0;
-    all_product.forEach((item) => {
-      newTotal += cartItem[item.id] * item.price;
-    });
-    setTotal(newTotal.toFixed(2));
+  let newTotal = 0;
+  all_product.forEach((item) => {
+    const price = parseFloat(item.price.replace(',', '')); // Remove commas and parse as float
+    newTotal += cartItem[item.id] * price;
+  });
+  setTotal(newTotal.toFixed(2));
   };
 
   const removeItem = (itemId) => {
     removeFromCart(itemId);
   };
 
+  const addItem = (itemId) => {
+    increment(itemId);
+  };
+
   useEffect(() => {
     calculateTotal();
   }, [cartItem]);
 
-  // Check if cart is empty
   const isCartEmpty = Object.values(cartItem).every(quantity => quantity === 0);
+  const totalUniqueItems = Object.keys(cartItem).filter(itemId => cartItem[itemId] > 0).length;
 
   return (
     <div className='cart-item'>
       <div className='cart-number'>
-        <h3>Cart({Object.values(cartItem).reduce((acc, curr) => acc + curr, 0)})</h3>
+        <h3>Cart({totalUniqueItems})</h3>
         { !isCartEmpty && (
         <p onClick={removeAllItems}>Remove all</p>
         )
@@ -60,7 +59,7 @@ function CartItem(props) {
                 <div className='cart-btn'>
                   <button onClick={() => removeItem(itemId)}><FaMinus /></button>
                   <p>{quantity}</p>
-                  <button onClick={() => addToCart(itemId)}><FaPlus /></button>
+                  <button onClick={() => addItem(itemId)}><FaPlus /></button>
                 </div>
               </div>
             );
@@ -75,7 +74,7 @@ function CartItem(props) {
         </div>
       )}
       { !isCartEmpty && (
-      <Link to='/checkout'><button className='cart-item-btn' onClick={props.toggle} >Checkout</button></Link>
+      <Link to='/checkout' style={{textDecoration: 'none'}}><button className='cart-item-btn' onClick={props.toggle} >Checkout</button></Link>
       )
       }
     </div>

@@ -2,9 +2,7 @@ import './App.css';
 import NavBar from './component/NavBar/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Shop from './pages/shop';
-import ShopCategory from './pages/shopCategory';
 import Product from './pages/product';
-import Cart from './pages/cart';
 import Footer from './component/Footer/Footer'
 import Headphone from './pages/Headphone';
 import Speaker from './pages/Speaker';

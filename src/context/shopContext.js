@@ -12,7 +12,6 @@ const getDefaultCart = () => {
 };
 
 
-
 const ShopContextProvider = (props) =>{
 
    const [cartItem, setCartItem] = useState(getDefaultCart)
@@ -29,28 +28,18 @@ const ShopContextProvider = (props) =>{
   }, [cartItem]);
 
 
-  // const [cartItem, setCartItem] = useState(() => {
-  //   const storedCart = localStorage.getItem("cart");
-  //   return storedCart ? JSON.parse(storedCart) : getDefaultCart();
-  // });
-
-  // useEffect(() => {
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //     // Update local storage with the latest cart items before unmounting
-  //     localStorage.setItem("cart", JSON.stringify(cartItem));
-  //   };
-  // }, []);
-
-  // const handleBeforeUnload = () => {
-  //   // Update local storage with the latest cart items before unloading
-  //   localStorage.setItem("cart", JSON.stringify(cartItem));
-  // };
-
+  const increment = (itemId) => {
+    setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+  };
 
   const addToCart = (itemId) => {
-    setCartItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItem((prev) => {
+      if (prev[itemId] === 0) {
+        return { ...prev, [itemId]: 1 };
+      } else {
+        return prev;
+      }
+    });
   };
 
   const removeFromCart = (itemId) => {
@@ -62,7 +51,7 @@ const ShopContextProvider = (props) =>{
   };
 
 
-    const contextValue = {all_product, cartItem, addToCart, removeFromCart, removeAllItems}
+    const contextValue = {all_product, cartItem, addToCart, removeFromCart, removeAllItems, increment}
     return(
      <ShopContext.Provider value={contextValue}>
        {props.children}

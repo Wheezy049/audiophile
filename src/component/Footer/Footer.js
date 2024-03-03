@@ -3,6 +3,7 @@ import './footer.css'
 import {FaFacebookSquare} from 'react-icons/fa';
 import {FaTwitter} from 'react-icons/fa';
 import {FaInstagram} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -10,10 +11,10 @@ function Footer() {
       <div className='footer-header'>
         <h3>audiophile</h3>
         <ul>
-         <li>Home</li>
-         <li>Headphones</li>
-         <li>Speakers</li>
-         <li>Earphones</li>
+         <li><Link style={{textDecoration: 'none'}} to='/'>Home</Link></li>
+         <li><Link style={{textDecoration: 'none'}} to='/headphone'>Headphones</Link></li>
+         <li><Link style={{textDecoration: 'none'}} to='/speaker'>Speakers</Link></li>
+         <li><Link style={{textDecoration: 'none'}} to='/earphone'>Earphones</Link></li>
         </ul>
       </div>
       <div className='footer-main'>

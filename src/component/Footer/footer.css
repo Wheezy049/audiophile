@@ -30,7 +30,10 @@
  gap: 3px;
  cursor: pointer;
 }
-.footer-header ul li:hover{
+.footer-header ul li a{
+  color: #fff;
+}
+.footer-header ul li a:hover{
   color: #d87d4a;
 }
 .footer-main, .footer-copy{

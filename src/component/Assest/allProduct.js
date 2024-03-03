@@ -105,7 +105,7 @@ let all_product = [
  },
  {
   id: 3,
-  price: 899,
+  price: '899',
   name: 'xx59',
   type: 'headphones',
   para: 'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.',
@@ -219,7 +219,7 @@ let all_product = [
  {
   id: 6,
   new: 'new product',
-  price: 599,
+  price: '599',
   name: 'yx1 wireless',
   type: 'earphones',
   para: 'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',

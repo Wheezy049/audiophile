@@ -1,6 +1,7 @@
 import React from 'react'
 import './item.css'
 import { FaAngleRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Item(props) {
   return (
@@ -9,7 +10,7 @@ function Item(props) {
       <div className='image'>
          <img src={props.image} alt='' />
          <h3>{props.name}</h3>
-         <p>Shop <FaAngleRight style={{color: '#D87D4A' }} /> </p>
+         <Link to={`/product/${props.id}`} style={{textDecoration: 'none'}}><p>Shop <FaAngleRight style={{color: '#D87D4A' }} /> </p></Link>
       </div>
      </div>
     </div>

@@ -6,7 +6,17 @@ import { ShopContext } from '../../context/shopContext'
 
 function ProductDisplay(props) {
   const {product} = props
-  const {addToCart} = useContext(ShopContext)
+  const {addToCart, increment, removeFromCart} = useContext(ShopContext)
+  const handleAddToCart = () => {
+    addToCart(product.id);
+  };
+  const handleIncrement=()=>{
+    increment(product.id)
+  }
+  const handleDecrement=()=>{
+    removeFromCart(product.id)
+  }
+
   return (
     <div>
       <div className='product-display'>
@@ -18,11 +28,11 @@ function ProductDisplay(props) {
                 <p>$ {product.price}</p>
                 <div className='btn'>
                   <div className='increment-btn'>
-                    <div> <FaMinus style={{opacity: 0.25}} /> </div>
-                    <p>1</p>
-                    <div> <FaPlus style={{opacity: 0.25}} /> </div>
+                    <div> <FaMinus onClick={handleDecrement} style={{opacity: 0.25}} /> </div>
+                    <p></p>
+                    <div> <FaPlus onClick={handleIncrement} style={{opacity: 0.25}} /> </div>
                   </div>
-                  <button onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
+                  <button onClick={handleAddToCart}>Add to Cart</button>
                 </div>
                 </div>
                 </div>
