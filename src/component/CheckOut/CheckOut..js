@@ -12,12 +12,13 @@ function CheckOut() {
   useEffect(() => {
     let totalPrice = 0;
     all_product.forEach((item) => {
-      totalPrice += cartItem[item.id] * item.price;
+      const price = parseFloat(item.price.replace(',', ''));
+      totalPrice += cartItem[item.id] * price;
     });
 
     const shippingCost = 50;
     const vat = 1079;
-    const grandTotal = totalPrice + shippingCost + (totalPrice * vat);
+    const grandTotal = totalPrice + shippingCost + vat;
 
     setTotalPrice(totalPrice.toFixed(2));
     setGrandTotal(grandTotal.toFixed(2));

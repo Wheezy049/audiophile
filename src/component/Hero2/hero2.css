@@ -166,14 +166,20 @@ padding: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    margin: 50px;
+    padding: 50px 0;
     gap: 0;
+  }
+  .speaker-img img{
+    width: 217px;
+    height: 177px;
   }
   .speaker-text h1{
     font-size: 24px;
   }
   .speaker-2{
     height: 200px;
+    margin: 50px;
   }
   .earphone{
     height: auto;

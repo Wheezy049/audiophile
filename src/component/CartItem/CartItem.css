@@ -132,7 +132,7 @@ margin: 10px 0;
    align-items: center;
    justify-content: space-between;
    margin: 0;
-   right: 0;
+   /* right: 0; */
    /* margin-left: 10px; */
   }
   .cart-item-btn{
@@ -160,7 +160,7 @@ margin: 10px 0;
 }
 
 /* mobile */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 480px) {
   .cart-item{
    width: 300px;
   }
